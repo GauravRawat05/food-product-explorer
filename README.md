@@ -33,10 +33,10 @@ This project was built with a focus on **User Experience (UX)** and **Code Modul
 
 ## ⏱ Time Taken
 
-**Total Time**: Approximately 6 Hours
+**Total Time**: Approximately 8 Hours
 -   Planning & Setup: 1 Hour
--   Core Features (API, Search, List): 2.5 Hours
--   UI Polish & Responsive Fixes: 2 Hours
+-   Core Features (API, Search, List): 3.5 Hours
+-   UI Polish & Responsive Fixes: 3 Hours
 -   Documentation & Cleanup: 0.5 Hours
 
 ## 📦 How to Run
