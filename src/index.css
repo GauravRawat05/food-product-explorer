@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    /* Zinc 50 */
+    --foreground: 240 10% 3.9%;
+    /* Zinc 950 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 142.1 76.2% 36.3%;
+    /* Green 600 - Fresh/Healthy */
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 24 9.8% 10%;
+    /* Dark secondary for contrast */
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 142 70% 95%;
+    /* Light Green Wash */
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-white/50 backdrop-blur-lg border border-white/30 hover:border-primary/30 transition-all duration-300;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Global Mesh Gradient Background for App */
+body {
+  background-image:
+    radial-gradient(at 0% 0%, hsla(var(--primary) / 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(var(--primary) / 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(24, 100%, 70%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(240, 100%, 70%, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
