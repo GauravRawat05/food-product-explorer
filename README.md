@@ -51,6 +51,3 @@ This project was built with a focus on **User Experience (UX)** and **Code Modul
     npm run dev
     ```
 4.  Open `http://localhost:5173` in your browser.
-
----
-*Built for Assignment Submission - September 2024*
